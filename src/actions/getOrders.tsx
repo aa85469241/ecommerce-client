@@ -20,3 +20,5 @@ const getOrdersWithUser = async (): Promise<Order[]> => {
 
 export default getOrdersWithUser;
 
+export const revalidate = 5;
+
