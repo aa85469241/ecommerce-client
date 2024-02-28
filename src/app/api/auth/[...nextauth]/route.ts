@@ -2,7 +2,6 @@ import { NextAuthOptions } from "next-auth";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/db/prisma";
 import { Adapter } from "next-auth/adapters";
-import { env } from "@/lib/env";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import NextAuth from "next-auth/next";
@@ -22,8 +21,8 @@ export const authOptions: NextAuthOptions = {
                     role: profile.role ?? UserRole.USER,
                 }
             },
-            clientId: env.GOOGLE_CLIENT_ID,
-            clientSecret: env.GOOGLE_CLIENT_SECRET,
+            clientId: process.env.GOOGLE_CLIENT_ID!,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
         }),
         CredentialsProvider({
             name: "credentials",
@@ -77,7 +76,7 @@ export const authOptions: NextAuthOptions = {
         strategy: "jwt",
     },
     // debug: process.env.NODE_ENV === 'development',
-    secret: env.NEXTAUTH_SECRET
+    secret: process.env.NEXTAUTH_SECRET
 }
 
 const handler = NextAuth(authOptions);

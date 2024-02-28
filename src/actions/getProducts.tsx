@@ -1,8 +1,7 @@
 import qs from 'query-string'
-import { env } from "@/lib/env";
 import { Product } from "@/types";
 
-const URL = `${env.NEXT_PUBLIC_API_URL}/products`;
+const URL = `${process.env.NEXT_PUBLIC_API_URL}/products`;
 
 interface Query {
     categoryId?: string;
