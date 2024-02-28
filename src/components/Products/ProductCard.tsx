@@ -2,7 +2,6 @@
 
 import { priceFormat } from "@/lib/format";
 import { Product } from "@/types";
-import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames"
