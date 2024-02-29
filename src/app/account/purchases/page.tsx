@@ -1,10 +1,9 @@
-
 import { Product } from '@/types';
 import getOrdersWithUser from '@/actions/getOrders';
 import getProduct from '@/actions/getProduct';
 import PurchasedItems from '@/components/Account/purchases/PurchasedItems';
 
-export const revalidate = 30;
+export const revalidate = 0;
 
 const PurchasesPage = async () => {
     const orders = await getOrdersWithUser();
