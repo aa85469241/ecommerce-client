@@ -7,6 +7,7 @@ import { SafeUser } from "@/types";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
 import { emailFormat } from "@/lib/format";
+import { usePathname } from "next/navigation";
 
 const Route = ({
     href,
@@ -17,10 +18,12 @@ const Route = ({
     Icon: IconType,
     label: string
 }) => {
+    const pathname = usePathname();
+
     return (
         <li>
             <Link href={href}>
-                <div className="btn btn-ghost w-fit flex items-center gap-2 text-sm md:text-base">
+                <div className={`btn btn-ghost w-fit flex items-center gap-2 text-sm md:text-base ${pathname === href ? "underline underline-offset-2" : ""}`}>
                     <Icon />
                     <p className="tracking-wide capitalize font-medium text-sm">
                         {label}

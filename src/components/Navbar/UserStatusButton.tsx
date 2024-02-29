@@ -18,7 +18,7 @@ const UserStatusButton: React.FC<UserStatusButtonProps> = ({ currentUser }) => {
             {currentUser
                 ? <div className="flex items-center p-2 md:p-0">
                     <div className="avatar cursor-pointer pointer-events-auto">
-                        <div className="w-8 rounded-full ring ring-sky-700/60 ring-offset-base-100 ring-offset-2">
+                        <div className="w-7 rounded-full ring ring-sky-700/60 ring-offset-base-100 ring-offset-2">
                             <Image
                                 src={currentUser?.image || ProfilePlaceholder}
                                 alt="profile"

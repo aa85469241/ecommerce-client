@@ -111,9 +111,9 @@ const MenuButton = ({ currentUser }: MenuButtonProps) => {
                                         <h6 className="text-xs text-neutral uppercase mt-2 mb-1">
                                             - user -
                                         </h6>
-                                        <MenuItem href="/account">
+                                        <MenuItem href="/account/personal-info">
                                             <CgProfile size={20} />
-                                            <span>Profile</span>
+                                            <span>Account</span>
                                         </MenuItem>
                                         <Menu.Item>
                                             <div

@@ -96,7 +96,7 @@ const ProfileForm: React.FC<ProfileFormProps> = ({
                         `}
                         onClick={() => setUpdateAccount(prev => !prev)}
                     >
-                        {updateAccount ? 'Update Cancel' : 'Update Account'}
+                        {updateAccount ? 'Cancel Update' : 'Update Account'}
                     </button>
                     {updateAccount &&
                         <button

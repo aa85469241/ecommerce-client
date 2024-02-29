@@ -11,7 +11,7 @@ const LogoutButton = () => {
             data-tip="Logout"
         >
             <button
-                className="btn btn-circle btn-ghost btn-sm"
+                className="btn btn-circle btn-ghost"
                 onClick={() => signOut({ callbackUrl: "/" })}
             >
                 <RiLogoutBoxLine size={20} />

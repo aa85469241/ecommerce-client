@@ -54,6 +54,9 @@ const PurchasedItems: React.FC<PurchasedItemsProps> = ({
                     </div>
                 ))}
             </div>
+            {products.length === 0 &&
+                <p>{"You haven't made any purchase yet."}</p>
+            }
         </div>
     )
 }
