@@ -4,11 +4,7 @@ import { getCurrentUser } from "./getCurrentUser";
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/orders`;
 
 const getOrders = async (): Promise<Order[]> => {
-    const res = await fetch(URL, {
-        next: {
-            revalidate: 30
-        }
-    });
+    const res = await fetch(URL);
 
     return res.json();
 }
