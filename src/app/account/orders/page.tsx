@@ -2,7 +2,7 @@
 import getOrdersWithUser from '@/actions/getOrders';
 import OrdersList from '@/components/Account/my-orders/OrdersList';
 
-export const revalidate = 0;
+export const revalidate = 30;
 
 const OrdersPage = async () => {
     const orders = await getOrdersWithUser();
