@@ -17,7 +17,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
                     <div className="flex items-center">
                         <Link
                             href="/products"
-                            className="mr-2 text-sm font-medium text-gray-600 hover:text-gray-900"
+                            className="mr-2 text-sm font-medium underline transition hover:scale-110"
                         >
                             Products
                         </Link>
@@ -36,7 +36,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
                 <li>
                     <div className="flex items-center">
                         <div
-                            className="mr-2 text-sm font-medium text-gray-600 select-none"
+                            className="mr-2 text-sm font-medium select-none"
                         >
                             {product.category.name}
                         </div>
@@ -54,7 +54,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
                 </li>
                 <li className="truncate">
                     <div
-                        className="font-medium text-sm text-gray-600 select-none"
+                        className="font-medium text-sm select-none"
                         data-tip={product.name}
                     >
                         {product.name}

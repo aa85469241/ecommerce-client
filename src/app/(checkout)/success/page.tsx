@@ -63,11 +63,11 @@ const StripeSuccess = () => {
                     <p id="success-text" className="translate-y-full">Your payment was completed!!</p>
                 </div>
                 <div id="buttons" className="space-x-6 opacity-0">
-                    <Link href="/">
-                        <Button label="Home page" className="btn-outline" />
-                    </Link>
                     <Link href="/products">
-                        <Button label="Buy more" className="bg-black text-white hover:bg-black/70" />
+                        <Button label="Buy more" className="btn-outline" />
+                    </Link>
+                    <Link href="/account/orders">
+                        <Button label="Check Your Orders" className="bg-black text-white hover:bg-black/70" />
                     </Link>
                 </div>
             </div>
