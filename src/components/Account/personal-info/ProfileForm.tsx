@@ -29,7 +29,6 @@ const ProfileForm: React.FC<ProfileFormProps> = ({
     } = useForm({
         resolver: zodResolver(AccountSchema),
         defaultValues: {
-            email: emailFormat(currentUser.email) as string,
             name: currentUser.name,
         }
     })
@@ -60,8 +59,8 @@ const ProfileForm: React.FC<ProfileFormProps> = ({
                         <input
                             type="text"
                             className="input input-bordered input-sm w-full disabled:shadow disabled:border-neutral-500/40"
-                            disabled={updateAccount ? false : true}
-                            {...register('email')}
+                            disabled
+                            defaultValue={emailFormat(currentUser.email)}
                         />
                         <span className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500">
                             {isGoogleAuth ? '(google)' : '(credential)'}
