@@ -10,6 +10,7 @@ import LogoutButton from './LogoutButton';
 
 const Navbar = async () => {
     const currentUser = await getCurrentUser();
+    const adminPageUrl = process.env.NEXT_PUBLIC_ADMIN_URL!;
 
     return (
         <nav
@@ -26,7 +27,7 @@ const Navbar = async () => {
             </div>
             <ul className="hidden md:flex md:items-center md:gap-4 lg:gap-6">
                 <li className="growing-underline">
-                    <Link href="http://localhost:8080">
+                    <Link href={adminPageUrl}>
                         Admin
                     </Link>
                 </li>
